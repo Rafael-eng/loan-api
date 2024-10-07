@@ -1,0 +1,27 @@
+spring:
+  datasource:
+    url: jdbc:h2:mem:case;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=FALSE
+    username: case
+    password: case
+  h2:
+    console:
+      enabled: true
+      path: /h2-console
+  jpa:
+    hibernate:
+      ddl-auto: create-drop
+    show-sql: true
+  jackson:
+    serialization:
+      FAIL_ON_EMPTY_BEANS: false
+
+google:
+  books:
+    api-url: "https://www.googleapis.com/books/v1/volumes"
+    api-key: "AIzaSyBgU5FDIyJhgiUOnHIhBDCRH_CqpW48F_4"
+
+server:
+  port: 8181
+  address: localhost
+  servlet:
+    context-path: /api
