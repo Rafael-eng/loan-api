@@ -6,7 +6,7 @@ Este projeto foi desenvolvido em Java 17.
 
 - JDK 17
 
-## Instalaçã
+## Instalação
 
 1. Compile e construa o projeto: 
    mvn clean install
