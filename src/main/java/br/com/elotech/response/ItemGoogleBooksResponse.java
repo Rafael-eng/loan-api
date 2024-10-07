@@ -11,7 +11,8 @@ public record ItemGoogleBooksResponse(VolumeInfo volumeInfo) {
     ) {
         public record IndustryIdentifier(
                 String identifier
-        ) {}
+        ) {
+        }
 
     }
-    }
+}

@@ -3,7 +3,6 @@ package br.com.elotech;
 import org.springframework.data.domain.Page;
 
 import java.io.Serializable;
-import java.util.List;
 
 public class PageResponse<T>  implements Serializable {
     private Page<T> data;

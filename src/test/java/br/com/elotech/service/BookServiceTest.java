@@ -18,13 +18,10 @@ import java.time.LocalDate;
 import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.mockito.ArgumentMatchers.anyLong;
 import static org.mockito.Mockito.when;
 
 public class BookServiceTest {
 
-    @Mock
-    private LoanRepository loanRepository;
 
     @Mock
     private BookRepository bookRepository;
@@ -34,6 +31,7 @@ public class BookServiceTest {
 
     private User user;
     private Book recommendedBook;
+    private Book book;
 
     @BeforeEach
     void setUp() {
@@ -41,7 +39,7 @@ public class BookServiceTest {
         user = new User("teste", "teste@gmail.com", LocalDate.now(), "123456789");
         user.setId(1L);
 
-        Book book = new Book("Title Teste", "Name Author Teste", "categoria", "12345", LocalDate.of(2008, 8, 1));
+        book = new Book("Title Teste", "Name Author Teste", "categoria", "12345",LocalDate.of(2008, 8, 1));
         book.setId(1L);
 
         recommendedBook = new Book("Title Teste2", "Name Author Teste", "categoria", "123456",LocalDate.of(2008, 8, 1));
@@ -60,7 +58,6 @@ public class BookServiceTest {
         assertEquals(1, recommendations.getTotalElements());
         assertEquals(recommendedBook.getTitle(), recommendations.getContent().get(0).getTitle());
     }
-
 
 
 }

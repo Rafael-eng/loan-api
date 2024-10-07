@@ -3,7 +3,6 @@ package br.com.elotech.service;
 import br.com.elotech.entity.Book;
 import br.com.elotech.entity.Loan;
 import br.com.elotech.entity.User;
-import br.com.elotech.mapper.LoanMapper;
 import br.com.elotech.repository.BookRepository;
 import br.com.elotech.repository.LoanRepository;
 import br.com.elotech.repository.UserRepository;
